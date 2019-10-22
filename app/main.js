@@ -9509,41 +9509,6 @@ Swiper.use(components);
 
 /***/ }),
 
-/***/ "./src/components/buildModeSwitcher.js":
-/*!*********************************************!*\
-  !*** ./src/components/buildModeSwitcher.js ***!
-  \*********************************************/
-/*! exports provided: buildModeSwitchers */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "buildModeSwitchers", function() { return buildModeSwitchers; });
-/* harmony import */ var _switch_mode_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./switch-mode.js */ "./src/components/switch-mode.js");
-
-
-const createBtnElement = mode => {
-  const newElement = document.createElement("button");
-  newElement.classList.add("btn-mode");
-  newElement.setAttribute("data-mode", mode);
-  newElement.innerHTML = `${mode}`;
-
-  return newElement;
-};
-
-const buildModeSwitchers = modes => {
-  const btnElements = modes.map(createBtnElement);
-
-  //   btnElements.forEach(btn =>
-  //     addModeSwitcher({ attribute: "data-mode", btnNode: btn, mainNode: project })
-  //   );
-
-  return btnElements;
-};
-
-
-/***/ }),
-
 /***/ "./src/components/buildProjectDOM.js":
 /*!*******************************************!*\
   !*** ./src/components/buildProjectDOM.js ***!
@@ -9656,35 +9621,6 @@ const swiperSlider = {
 
 /***/ }),
 
-/***/ "./src/components/switch-mode.js":
-/*!***************************************!*\
-  !*** ./src/components/switch-mode.js ***!
-  \***************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// const switchBodyMode = (params) => {
-//    const mainEl = document
-// }
-
-const buildSwitcher = ({ attribute, btnNode, mainNode }) => {
-  //const btns = Array.from(mainNode.getElementsByClassName(btnClass));
-
-  btnNode.addEventListener("click", () => {
-    const value = btnNode.getAttribute(attribute);
-    console.log(value);
-    mainNode.setAttribute(attribute, value);
-    //mainNode.classList.add(attribute);
-  });
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (buildSwitcher);
-
-
-/***/ }),
-
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
@@ -9697,17 +9633,51 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/js/swiper.esm.bundle.js");
 /* harmony import */ var _components_swiperParams_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/swiperParams.js */ "./src/components/swiperParams.js");
 /* harmony import */ var _components_buildProjectDOM_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/buildProjectDOM.js */ "./src/components/buildProjectDOM.js");
-/* harmony import */ var _components_buildModeSwitcher_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/buildModeSwitcher.js */ "./src/components/buildModeSwitcher.js");
-/* harmony import */ var _components_switch_mode_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/switch-mode.js */ "./src/components/switch-mode.js");
-/* harmony import */ var _main_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./main.css */ "./src/main.css");
-/* harmony import */ var _main_css__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_main_css__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _main_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./main.css */ "./src/main.css");
+/* harmony import */ var _main_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_main_css__WEBPACK_IMPORTED_MODULE_3__);
 
 
 
+//import { buildModeSwitchers } from "./components/buildModeSwitcher.js";
+//import addModeSwitcher from "./components/switch-mode.js";
 
 
 
+const stopScroll = () => {
+  window.scrollTo(0, 1);
+  clearInterval(scrolldelay);
+};
 
+const addModeSwitcher = ({ attribute, btnNode, mainNode }) => {
+  //const btns = Array.from(mainNode.getElementsByClassName(btnClass));
+
+  btnNode.addEventListener("click", () => {
+    stopScroll();
+    const value = btnNode.getAttribute(attribute);
+    console.log(value);
+    mainNode.setAttribute(attribute, value);
+    //mainNode.classList.add(attribute);
+  });
+};
+
+const createBtnElement = mode => {
+  const newElement = document.createElement("button");
+  newElement.classList.add("btn-mode");
+  newElement.setAttribute("data-mode", mode);
+  newElement.innerHTML = `${mode}`;
+
+  return newElement;
+};
+
+const buildModeSwitchers = modes => {
+  const btnElements = modes.map(createBtnElement);
+
+  //   btnElements.forEach(btn =>
+  //     addModeSwitcher({ attribute: "data-mode", btnNode: btn, mainNode: project })
+  //   );
+
+  return btnElements;
+};
 
 // const setSwiper = (className, swiperParams) => {
 //   console.log(className);
@@ -9749,7 +9719,7 @@ const buildHeader = (name, index) => {
 
   header.appendChild(btn);
 
-  Object(_components_switch_mode_js__WEBPACK_IMPORTED_MODULE_4__["default"])({
+  addModeSwitcher({
     attribute: "data-project",
     btnNode: btn,
     mainNode: projects
@@ -9773,31 +9743,28 @@ const buildProject = projectObj => {
 
   let projectSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](swiperContainer, _components_swiperParams_js__WEBPACK_IMPORTED_MODULE_1__["swiperSlider"]);
 
-  const btnElements = Object(_components_buildModeSwitcher_js__WEBPACK_IMPORTED_MODULE_3__["buildModeSwitchers"])(modes);
+  const btnElements = buildModeSwitchers(modes);
 
   btnElements.forEach(btn => {
     btn.addEventListener("click", () => {
       const value = btn.getAttribute("data-mode");
       console.log(value);
       project.setAttribute("data-mode", value);
+      stopVideos();
+      stopScroll();
 
       switch (value) {
         case "strobo": {
-          clearInterval(scrolldelay);
-          stopVideos();
           projectSwiper.destroy(true, true);
           projectSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](swiperContainer, _components_swiperParams_js__WEBPACK_IMPORTED_MODULE_1__["swiperStrobo"]);
           break;
         }
         case "slider": {
-          clearInterval(scrolldelay);
-          stopVideos();
           projectSwiper.destroy(true, true);
           projectSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](swiperContainer, _components_swiperParams_js__WEBPACK_IMPORTED_MODULE_1__["swiperSlider"]);
           break;
         }
         case "scroll": {
-          stopVideos();
           projectSwiper.destroy(true, true);
           autoScroll();
           break;
