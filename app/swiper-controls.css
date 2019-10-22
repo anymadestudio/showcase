@@ -1,0 +1,8 @@
+.swiper-container .swiper-next {
+  right: 0;
+  cursor: url("./icons/arrow-right.svg"), e-resize;
+}
+
+.swiper-container .swiper-prev {
+  cursor: url("./icons/arrow-left.svg"), w-resize;
+}
