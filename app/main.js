@@ -97,7 +97,7 @@ exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/di
 // Imports
 exports.i(__webpack_require__(/*! -!../node_modules/css-loader/dist/cjs.js??ref--4-1!../node_modules/postcss-loader/lib!./swiper.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/lib/index.js!./src/swiper.css"), "");
 // Module
-exports.push([module.i, "body {\n  background-color: black;\n  margin: 0;\n  padding: 0;\n}\n\nbutton {\n  /* font-size: 1em;\n  padding: 0.2em 0.4em;\n  border-radius: 0.2em;\n  background-color: lightslategray;\n  margin-left: 0.5em;\n  border: none; */\n  color: gray;\n  font-size: 1.5em;\n  background-color: transparent;\n  border: none;\n  outline: none;\n  cursor: pointer;\n}\n\n.btn-mode {\n  color: rgba(250, 250, 250, 1);\n  font-size: 1.5em;\n  padding: 0.2em 0.4em;\n  border-radius: 0.5em;\n  background-color: rgba(50, 50, 50, 1);\n  margin-left: 0.2em;\n  border: none;\n}\n\nvideo:active,\nvideo:focus {\n  outline: none;\n}\n\n.controls {\n  position: fixed;\n  z-index: 100;\n  bottom: 20px;\n}\n\n.project-controls {\n  position: fixed;\n  z-index: 100;\n  top: 20px;\n}\n\n.swiper-slide {\n  text-align: center;\n  font-size: 18px;\n  background: inherit;\n  display: flex;\n  align-items: center;\n}\n\n.project-thumb__img,\n.project-thumb__video {\n  display: block;\n  margin: 10vh auto;\n  height: 80vh;\n  width: auto;\n}\n\n.slider,\n.strobo {\n  opacity: 0;\n}\n\n.swiper-next,\n.swiper-prev {\n  position: absolute;\n  top: 0;\n  z-index: 2;\n  width: 10%;\n  height: 100%;\n  outline: none;\n}\n\n.swiper-container .swiper-next {\n  right: 0;\n}\n\n.swiper-pagination-bullet {\n  background-color: rgba(188, 170, 158, 1);\n}\n\n.swiper-container-horizontal > .swiper-pagination-bullets,\n.swiper-pagination-custom,\n.swiper-pagination-fraction {\n  bottom: auto;\n  top: 10px;\n}\n\n.btn {\n  cursor: pointer;\n}\n\n.projects {\n  position: relative;\n}\n\n.projects > div {\n  position: absolute;\n  width: 100%;\n  opacity: 0;\n  z-index: 0;\n}\n\n.projects[data-project=\"0\"] > div:nth-child(1),\n.projects[data-project=\"1\"] > div:nth-child(2),\n.projects[data-project=\"2\"] > div:nth-child(3),\n.projects[data-project=\"3\"] > div:nth-child(4),\n.projects[data-project=\"4\"] > div:nth-child(5),\n.projects[data-project=\"5\"] > div:nth-child(6) {\n  opacity: 1;\n  z-index: 10;\n}\n", ""]);
+exports.push([module.i, "body {\n  background-color: black;\n  margin: 0;\n  padding: 0;\n}\n\nbutton {\n  /* font-size: 1em;\n  padding: 0.2em 0.4em;\n  border-radius: 0.2em;\n  background-color: lightslategray;\n  margin-left: 0.5em;\n  border: none; */\n  color: gray;\n  font-size: 1.5em;\n  background-color: transparent;\n  border: none;\n  outline: none;\n  cursor: pointer;\n}\n\n.btn-mode {\n  color: rgba(250, 250, 250, 1);\n  font-size: 1.5em;\n  padding: 0.2em 0.4em;\n  border-radius: 0.5em;\n  background-color: rgba(50, 50, 50, 1);\n  margin-left: 0.2em;\n  border: none;\n}\n\nvideo:active,\nvideo:focus {\n  outline: none;\n}\n\n.controls {\n  position: fixed;\n  z-index: 100;\n  bottom: 20px;\n}\n\n.project-controls {\n  position: fixed;\n  z-index: 100;\n  top: 20px;\n}\n\n.swiper-slide {\n  text-align: center;\n  font-size: 18px;\n  background: inherit;\n  display: flex;\n  align-items: center;\n}\n\n.project-thumb__img,\n.project-thumb__video {\n  display: block;\n  margin: 10vh auto;\n  height: 80vh;\n  width: auto;\n}\n\n.slider,\n.strobo {\n  opacity: 0;\n}\n\n.swiper-next,\n.swiper-prev {\n  position: absolute;\n  top: 0;\n  z-index: 2;\n  width: 10%;\n  height: 100%;\n  outline: none;\n}\n\n.swiper-container .swiper-next {\n  right: 0;\n}\n\n.swiper-pagination-bullet {\n  background-color: rgba(188, 170, 158, 1);\n}\n\n.swiper-container-horizontal > .swiper-pagination-bullets,\n.swiper-pagination-custom,\n.swiper-pagination-fraction {\n  bottom: auto;\n  top: 10px;\n}\n\n.btn {\n  cursor: pointer;\n}\n\n.projects {\n  position: relative;\n}\n\n.projects > div {\n  position: absolute;\n  width: 100%;\n  opacity: 0;\n  z-index: 0;\n  height: 100vh;\n  overflow: hidden;\n}\n\n.projects[data-project=\"0\"] > div:nth-child(1),\n.projects[data-project=\"1\"] > div:nth-child(2),\n.projects[data-project=\"2\"] > div:nth-child(3),\n.projects[data-project=\"3\"] > div:nth-child(4),\n.projects[data-project=\"4\"] > div:nth-child(5),\n.projects[data-project=\"5\"] > div:nth-child(6) {\n  height: auto;\n  display: block;\n  opacity: 1;\n  z-index: 10;\n}\n", ""]);
 
 
 /***/ }),
@@ -9509,6 +9509,184 @@ Swiper.use(components);
 
 /***/ }),
 
+/***/ "./src/components/autoscroll.js":
+/*!**************************************!*\
+  !*** ./src/components/autoscroll.js ***!
+  \**************************************/
+/*! exports provided: startScroll, stopScroll, cancelScroll */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "startScroll", function() { return startScroll; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "stopScroll", function() { return stopScroll; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "cancelScroll", function() { return cancelScroll; });
+// function debounce(func, wait, immediate) {
+//   var timeout;
+//   return function() {
+//     var context = this,
+//       args = arguments;
+//     var later = function() {
+//       timeout = null;
+//       if (!immediate) func.apply(context, args);
+//     };
+//     var callNow = immediate && !timeout;
+//     clearTimeout(timeout);
+//     timeout = setTimeout(later, wait);
+//     if (callNow) func.apply(context, args);
+//   };
+// }
+
+// function autoScroll(el) {
+//   var scrollAttempts = 0;
+//   var incrementScrollAttempts = debounce(function() {
+//     scrollAttempts++;
+//   });
+
+//   window.addEventListener("scroll", incrementScrollAttempts);
+
+//   //var el = document.querySelector(selector);
+//   var chkReadyState = setInterval(function() {
+//     if (el) {
+//       console.log(el);
+//       window.scrollTo(0, 1);
+//     }
+//     if (document.readyState == "complete" || scrollAttempts > 1) {
+//       clearInterval(chkReadyState);
+//       window.removeEventListener("scroll", incrementScrollAttempts, false);
+//     }
+//   }, 100);
+// }
+
+window.scrolldelay = null;
+window.isScrolling = false;
+
+function startScroll() {
+  window.scrollBy(0, 1);
+  window.scrolldelay = setTimeout(startScroll, 10);
+  window.isScrolling = true;
+}
+
+function stopScroll() {
+  //scrolldelay = null;
+  window.isScrolling = false;
+  clearInterval(window.scrolldelay);
+}
+
+function cancelScroll() {
+  window.isScrolling = false;
+  clearInterval(window.scrolldelay);
+  window.scrollTo(0, 1);
+}
+
+
+/***/ }),
+
+/***/ "./src/components/buildHeader.js":
+/*!***************************************!*\
+  !*** ./src/components/buildHeader.js ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _createBtnElement_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./createBtnElement.js */ "./src/components/createBtnElement.js");
+/* harmony import */ var _autoscroll_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./autoscroll.js */ "./src/components/autoscroll.js");
+
+
+
+const projectSwitcher = ({ attribute, btnNode, mainNode }) => {
+  btnNode.addEventListener("click", () => {
+    Object(_autoscroll_js__WEBPACK_IMPORTED_MODULE_1__["cancelScroll"])();
+    const value = btnNode.getAttribute(attribute);
+    mainNode.setAttribute(attribute, value);
+    //mainNode.classList.add(attribute);
+  });
+};
+
+const buildHeader = (name, index) => {
+  const header = document.getElementById("project-toggle");
+  const projects = document.getElementById("projects");
+
+  const btn = Object(_createBtnElement_js__WEBPACK_IMPORTED_MODULE_0__["default"])({
+    innerText: name,
+    attribute: "data-project",
+    attributeValue: index,
+    classList: "btn-project"
+  });
+
+  header.appendChild(btn);
+
+  projectSwitcher({
+    attribute: "data-project",
+    btnNode: btn,
+    mainNode: projects
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (buildHeader);
+
+
+/***/ }),
+
+/***/ "./src/components/buildProject.js":
+/*!****************************************!*\
+  !*** ./src/components/buildProject.js ***!
+  \****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _buildProjectDOM_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./buildProjectDOM.js */ "./src/components/buildProjectDOM.js");
+/* harmony import */ var _initilazeSwiper_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./initilazeSwiper.js */ "./src/components/initilazeSwiper.js");
+/* harmony import */ var _createBtnElement_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./createBtnElement.js */ "./src/components/createBtnElement.js");
+/* harmony import */ var _switchMode_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./switchMode.js */ "./src/components/switchMode.js");
+
+
+
+
+
+const buildProject = ({ name, images, defaultMode }) => {
+  const container = document.getElementById("projects");
+  const modes = ["scroll", "slider", "strobo"];
+
+  const { project, controls, swiperContainer } = Object(_buildProjectDOM_js__WEBPACK_IMPORTED_MODULE_0__["default"])({
+    container,
+    name,
+    images,
+    modes,
+    defaultMode
+  });
+
+  Object(_initilazeSwiper_js__WEBPACK_IMPORTED_MODULE_1__["default"])(swiperContainer, defaultMode);
+
+  const btnElements = modes.map(mode =>
+    Object(_createBtnElement_js__WEBPACK_IMPORTED_MODULE_2__["default"])({
+      innerText: mode,
+      attribute: "data-mode",
+      attributeValue: mode
+    })
+  );
+
+  btnElements.forEach(el =>
+    el.addEventListener("click", () =>
+      Object(_switchMode_js__WEBPACK_IMPORTED_MODULE_3__["default"])({
+        btn: el,
+        project,
+        swiperContainer
+      })
+    )
+  );
+
+  btnElements.forEach(btn => controls.appendChild(btn));
+};
+/* harmony default export */ __webpack_exports__["default"] = (buildProject);
+
+
+/***/ }),
+
 /***/ "./src/components/buildProjectDOM.js":
 /*!*******************************************!*\
   !*** ./src/components/buildProjectDOM.js ***!
@@ -9582,6 +9760,68 @@ const buildProjectDOM = ({ container, name, images, modes, defaultMode }) => {
 
 /***/ }),
 
+/***/ "./src/components/createBtnElement.js":
+/*!********************************************!*\
+  !*** ./src/components/createBtnElement.js ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+const createBtnElement = ({ innerText, attribute, attributeValue }) => {
+  const newElement = document.createElement("button");
+  newElement.setAttribute(attribute, attributeValue);
+  newElement.innerHTML = `${innerText}`;
+
+  return newElement;
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (createBtnElement);
+
+
+/***/ }),
+
+/***/ "./src/components/initilazeSwiper.js":
+/*!*******************************************!*\
+  !*** ./src/components/initilazeSwiper.js ***!
+  \*******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/js/swiper.esm.bundle.js");
+/* harmony import */ var _swiperParams__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./swiperParams */ "./src/components/swiperParams.js");
+/* harmony import */ var _autoscroll__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./autoscroll */ "./src/components/autoscroll.js");
+
+
+
+
+const initilazeSwiper = (el, mode) => {
+  switch (mode) {
+    case "strobo": {
+      new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](el, _swiperParams__WEBPACK_IMPORTED_MODULE_1__["swiperStrobo"]);
+      break;
+    }
+    case "slider": {
+      new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](el, _swiperParams__WEBPACK_IMPORTED_MODULE_1__["swiperSlider"]);
+      break;
+    }
+    case "scroll": {
+      if (!window.scrolldelay) {
+        Object(_autoscroll__WEBPACK_IMPORTED_MODULE_2__["startScroll"])();
+      }
+      break;
+    }
+  }
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (initilazeSwiper);
+
+
+/***/ }),
+
 /***/ "./src/components/swiperParams.js":
 /*!****************************************!*\
   !*** ./src/components/swiperParams.js ***!
@@ -9601,7 +9841,7 @@ const swiperStrobo = {
   //   clickable: true
   // },
   autoplay: {
-    delay: 100
+    delay: 300
   }
 };
 
@@ -9611,12 +9851,46 @@ const swiperSlider = {
     prevEl: ".swiper-prev"
   },
   speed: 0,
-  loop: true
+  loop: true,
+  keyboard: {
+    enabled: true,
+    onlyInViewport: false
+  }
   // pagination: {
   //   el: ".swiper-pagination",
   //   clickable: true
   // }
 };
+
+
+/***/ }),
+
+/***/ "./src/components/switchMode.js":
+/*!**************************************!*\
+  !*** ./src/components/switchMode.js ***!
+  \**************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _initilazeSwiper_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./initilazeSwiper.js */ "./src/components/initilazeSwiper.js");
+
+
+const switchMode = ({ btn, project, swiperContainer }) => {
+  const mode = btn.getAttribute("data-mode");
+  project.setAttribute("data-mode", mode);
+
+  //var projectSwiper = document.querySelector('.swiper-container').swiper
+  var projectSwiper = swiperContainer.swiper;
+  if (projectSwiper) {
+    projectSwiper.destroy(true, true);
+  }
+
+  Object(_initilazeSwiper_js__WEBPACK_IMPORTED_MODULE_0__["default"])(swiperContainer, mode);
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (switchMode);
 
 
 /***/ }),
@@ -9630,154 +9904,42 @@ const swiperSlider = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/js/swiper.esm.bundle.js");
-/* harmony import */ var _components_swiperParams_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/swiperParams.js */ "./src/components/swiperParams.js");
-/* harmony import */ var _components_buildProjectDOM_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/buildProjectDOM.js */ "./src/components/buildProjectDOM.js");
+/* harmony import */ var _components_buildProject_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/buildProject.js */ "./src/components/buildProject.js");
+/* harmony import */ var _components_buildHeader_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/buildHeader.js */ "./src/components/buildHeader.js");
+/* harmony import */ var _components_autoscroll_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/autoscroll.js */ "./src/components/autoscroll.js");
 /* harmony import */ var _main_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./main.css */ "./src/main.css");
 /* harmony import */ var _main_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_main_css__WEBPACK_IMPORTED_MODULE_3__);
 
 
 
-//import { buildModeSwitchers } from "./components/buildModeSwitcher.js";
+
+//import { buildModeSwitcher } from "./components/buildModeSwitcher.js";
 //import addModeSwitcher from "./components/switch-mode.js";
 
 
 
-const stopScroll = () => {
-  window.scrollTo(0, 1);
-  clearInterval(scrolldelay);
-};
+window.onchange = () => console.log("now");
 
-const addModeSwitcher = ({ attribute, btnNode, mainNode }) => {
-  //const btns = Array.from(mainNode.getElementsByClassName(btnClass));
-
-  btnNode.addEventListener("click", () => {
-    stopScroll();
-    const value = btnNode.getAttribute(attribute);
-    console.log(value);
-    mainNode.setAttribute(attribute, value);
-    //mainNode.classList.add(attribute);
-  });
-};
-
-const createBtnElement = mode => {
-  const newElement = document.createElement("button");
-  newElement.classList.add("btn-mode");
-  newElement.setAttribute("data-mode", mode);
-  newElement.innerHTML = `${mode}`;
-
-  return newElement;
-};
-
-const buildModeSwitchers = modes => {
-  const btnElements = modes.map(createBtnElement);
-
-  //   btnElements.forEach(btn =>
-  //     addModeSwitcher({ attribute: "data-mode", btnNode: btn, mainNode: project })
-  //   );
-
-  return btnElements;
-};
-
-// const setSwiper = (className, swiperParams) => {
-//   console.log(className);
-//   var mySwiper = new Swiper(className, swiperParams);
+// const stopVideos = params => {
+//   [...document.querySelectorAll("video")].forEach(video => {
+//     console.log(video);
+//     video.pause();
+//   });
 // };
-let scrolldelay;
 
-const stopVideos = params => {
-  [...document.querySelectorAll("video")].forEach(video => {
-    console.log(video);
-    video.pause();
-  });
+window.onkeydown = e => {
+  if (e.key == " ") {
+    if (window.isScrolling) {
+      console.log(window.scrolldelay);
+      Object(_components_autoscroll_js__WEBPACK_IMPORTED_MODULE_2__["stopScroll"])();
+    } else {
+      Object(_components_autoscroll_js__WEBPACK_IMPORTED_MODULE_2__["startScroll"])();
+    }
+  }
 };
 
-function autoScroll() {
-  window.scrollBy(0, 1);
-  scrolldelay = setTimeout(autoScroll, 10);
-}
-
-const createBubuElement = ({ innerText, attribute, attributeValue }) => {
-  const newElement = document.createElement("button");
-  newElement.setAttribute(attribute, attributeValue);
-  newElement.innerHTML = `${innerText}`;
-  console.log(newElement);
-
-  return newElement;
-};
-
-const buildHeader = (name, index) => {
-  const header = document.getElementById("project-toggle");
-  const projects = document.getElementById("projects");
-
-  const btn = createBubuElement({
-    innerText: name,
-    attribute: "data-project",
-    attributeValue: index,
-    classList: "btn-project"
-  });
-
-  header.appendChild(btn);
-
-  addModeSwitcher({
-    attribute: "data-project",
-    btnNode: btn,
-    mainNode: projects
-  });
-};
-
-const buildProject = projectObj => {
-  const { name, images, defaultMode } = projectObj;
-
-  const container = document.getElementById("projects");
-
-  const modes = ["scroll", "slider", "strobo"];
-
-  const { project, controls, swiperContainer } = Object(_components_buildProjectDOM_js__WEBPACK_IMPORTED_MODULE_2__["default"])({
-    container,
-    name,
-    images,
-    modes,
-    defaultMode
-  });
-
-  let projectSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](swiperContainer, _components_swiperParams_js__WEBPACK_IMPORTED_MODULE_1__["swiperSlider"]);
-
-  const btnElements = buildModeSwitchers(modes);
-
-  btnElements.forEach(btn => {
-    btn.addEventListener("click", () => {
-      const value = btn.getAttribute("data-mode");
-      console.log(value);
-      project.setAttribute("data-mode", value);
-      stopVideos();
-      stopScroll();
-
-      switch (value) {
-        case "strobo": {
-          projectSwiper.destroy(true, true);
-          projectSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](swiperContainer, _components_swiperParams_js__WEBPACK_IMPORTED_MODULE_1__["swiperStrobo"]);
-          break;
-        }
-        case "slider": {
-          projectSwiper.destroy(true, true);
-          projectSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](swiperContainer, _components_swiperParams_js__WEBPACK_IMPORTED_MODULE_1__["swiperSlider"]);
-          break;
-        }
-        case "scroll": {
-          projectSwiper.destroy(true, true);
-          autoScroll();
-          break;
-        }
-      }
-    });
-  });
-
-  btnElements.forEach(btn => controls.appendChild(btn));
-};
-
-projects.forEach(buildProject);
-projects.forEach((obj, index) => buildHeader(obj.name, index));
+projects.forEach(_components_buildProject_js__WEBPACK_IMPORTED_MODULE_0__["default"]);
+projects.forEach((obj, index) => Object(_components_buildHeader_js__WEBPACK_IMPORTED_MODULE_1__["default"])(obj.name, index));
 
 
 /***/ }),
