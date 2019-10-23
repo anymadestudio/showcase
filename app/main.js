@@ -97,7 +97,7 @@ exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/di
 // Imports
 exports.i(__webpack_require__(/*! -!../node_modules/css-loader/dist/cjs.js??ref--4-1!../node_modules/postcss-loader/lib!./swiper.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/lib/index.js!./src/swiper.css"), "");
 // Module
-exports.push([module.i, "body {\n  background-color: black;\n  margin: 0;\n  padding: 0;\n}\n\nbutton {\n  /* font-size: 1em;\n  padding: 0.2em 0.4em;\n  border-radius: 0.2em;\n  background-color: lightslategray;\n  margin-left: 0.5em;\n  border: none; */\n  color: gray;\n  font-size: 1.5em;\n  background-color: transparent;\n  border: none;\n  outline: none;\n  cursor: pointer;\n}\n\n.btn-mode {\n  color: rgba(250, 250, 250, 1);\n  font-size: 1.5em;\n  padding: 0.2em 0.4em;\n  border-radius: 0.5em;\n  background-color: rgba(50, 50, 50, 1);\n  margin-left: 0.2em;\n  border: none;\n}\n\nvideo:active,\nvideo:focus {\n  outline: none;\n}\n\n.controls {\n  position: fixed;\n  z-index: 100;\n  bottom: 20px;\n}\n\n.project-controls {\n  position: fixed;\n  z-index: 100;\n  top: 20px;\n}\n\n.swiper-slide {\n  text-align: center;\n  font-size: 18px;\n  background: inherit;\n  display: flex;\n  align-items: center;\n}\n\n.project-thumb__img,\n.project-thumb__video {\n  display: block;\n  margin: 10vh auto;\n  height: 80vh;\n  width: auto;\n}\n\n.slider,\n.strobo {\n  opacity: 0;\n}\n\n.swiper-next,\n.swiper-prev {\n  position: absolute;\n  top: 0;\n  z-index: 2;\n  width: 10%;\n  height: 100%;\n  outline: none;\n}\n\n.swiper-container .swiper-next {\n  right: 0;\n}\n\n.swiper-pagination-bullet {\n  background-color: rgba(188, 170, 158, 1);\n}\n\n.swiper-container-horizontal > .swiper-pagination-bullets,\n.swiper-pagination-custom,\n.swiper-pagination-fraction {\n  bottom: auto;\n  top: 10px;\n}\n\n.btn {\n  cursor: pointer;\n}\n\n.projects {\n  position: relative;\n}\n\n.projects > div {\n  position: absolute;\n  width: 100%;\n  opacity: 0;\n  z-index: 0;\n  height: 100vh;\n  overflow: hidden;\n}\n\n.projects[data-project=\"0\"] > div:nth-child(1),\n.projects[data-project=\"1\"] > div:nth-child(2),\n.projects[data-project=\"2\"] > div:nth-child(3),\n.projects[data-project=\"3\"] > div:nth-child(4),\n.projects[data-project=\"4\"] > div:nth-child(5),\n.projects[data-project=\"5\"] > div:nth-child(6) {\n  height: auto;\n  display: block;\n  opacity: 1;\n  z-index: 10;\n}\n", ""]);
+exports.push([module.i, "body {\n  background-color: black;\n  margin: 0;\n  padding: 0;\n}\n\nbutton {\n  /* font-size: 1em;\n  padding: 0.2em 0.4em;\n  border-radius: 0.2em;\n  background-color: lightslategray;\n  margin-left: 0.5em;\n  border: none; */\n  color: gray;\n  font-size: 1em;\n  background-color: transparent;\n  border: none;\n  outline: none;\n  cursor: pointer;\n}\n\n.btn-mode {\n  color: rgba(250, 250, 250, 1);\n  font-size: 1.5em;\n  padding: 0.2em 0.4em;\n  border-radius: 0.5em;\n  background-color: rgba(50, 50, 50, 1);\n  margin-left: 0.2em;\n  border: none;\n}\n\nvideo:active,\nvideo:focus {\n  outline: none;\n}\n\n.controls {\n  position: fixed;\n  z-index: 100;\n  bottom: 20px;\n}\n\n.project-controls {\n  position: fixed;\n  z-index: 100;\n  top: 20px;\n}\n\n.swiper-slide {\n  text-align: center;\n  font-size: 18px;\n  background: inherit;\n  display: flex;\n  align-items: center;\n}\n\n.project-thumb__img,\n.project-thumb__video {\n  display: block;\n  margin: 10vh auto;\n  height: 80vh;\n  width: auto;\n}\n\n.slider,\n.strobo {\n  opacity: 0;\n}\n\n.btn {\n  cursor: pointer;\n}\n\n.projects {\n  position: relative;\n}\n\n.projects > div {\n  position: absolute;\n  width: 100%;\n  opacity: 0;\n  z-index: 0;\n  height: 100vh;\n  overflow: hidden;\n}\n\n.projects[data-project=\"0\"] > div:nth-child(1),\n.projects[data-project=\"1\"] > div:nth-child(2),\n.projects[data-project=\"2\"] > div:nth-child(3),\n.projects[data-project=\"3\"] > div:nth-child(4),\n.projects[data-project=\"4\"] > div:nth-child(5),\n.projects[data-project=\"5\"] > div:nth-child(6) {\n  height: auto;\n  display: block;\n  opacity: 1;\n  z-index: 10;\n}\n\n.project[data-mode=\"slider\"] .swiper-next,\n.project[data-mode=\"strobo\"] .swiper-next,\n.project[data-mode=\"slider\"] .swiper-prev,\n.project[data-mode=\"strobo\"] .swiper-prev {\n  position: absolute;\n  top: 0;\n  z-index: 2;\n  width: 10%;\n  height: 100%;\n  outline: none;\n}\n\n.swiper-container .swiper-next {\n  right: 0;\n}\n\n.swiper-pagination-bullet {\n  background-color: rgba(188, 170, 158, 1);\n}\n\n.swiper-container-horizontal > .swiper-pagination-bullets,\n.swiper-pagination-custom,\n.swiper-pagination-fraction {\n  bottom: auto;\n  top: 10px;\n}\n", ""]);
 
 
 /***/ }),
@@ -9558,9 +9558,6 @@ __webpack_require__.r(__webpack_exports__);
 //   }, 100);
 // }
 
-window.scrolldelay = null;
-window.isScrolling = false;
-
 function startScroll() {
   window.scrollBy(0, 1);
   window.scrolldelay = setTimeout(startScroll, 10);
@@ -9568,14 +9565,17 @@ function startScroll() {
 }
 
 function stopScroll() {
+  console.count("stop");
   //scrolldelay = null;
   window.isScrolling = false;
-  clearInterval(window.scrolldelay);
+  clearTimeout(window.scrolldelay);
+  window.scrolldelay = null;
 }
 
 function cancelScroll() {
   window.isScrolling = false;
-  clearInterval(window.scrolldelay);
+  clearTimeout(window.scrolldelay);
+  window.scrolldelay = null;
   window.scrollTo(0, 1);
 }
 
@@ -9596,9 +9596,15 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const projectSwitcher = ({ attribute, btnNode, mainNode }) => {
+const projectSwitcher = ({ attribute, btnNode, mainNode, projectNode }) => {
   btnNode.addEventListener("click", () => {
-    Object(_autoscroll_js__WEBPACK_IMPORTED_MODULE_1__["cancelScroll"])();
+    if (window.isScrolling) {
+      Object(_autoscroll_js__WEBPACK_IMPORTED_MODULE_1__["cancelScroll"])();
+    }
+    if ("scroll" == projectNode.getAttribute("data-mode")) {
+      console.log("scroll");
+      Object(_autoscroll_js__WEBPACK_IMPORTED_MODULE_1__["startScroll"])();
+    }
     const value = btnNode.getAttribute(attribute);
     mainNode.setAttribute(attribute, value);
     //mainNode.classList.add(attribute);
@@ -9608,6 +9614,7 @@ const projectSwitcher = ({ attribute, btnNode, mainNode }) => {
 const buildHeader = (name, index) => {
   const header = document.getElementById("project-toggle");
   const projects = document.getElementById("projects");
+  const project = Array.from(projects.getElementsByClassName("project"))[index];
 
   const btn = Object(_createBtnElement_js__WEBPACK_IMPORTED_MODULE_0__["default"])({
     innerText: name,
@@ -9621,7 +9628,8 @@ const buildHeader = (name, index) => {
   projectSwitcher({
     attribute: "data-project",
     btnNode: btn,
-    mainNode: projects
+    mainNode: projects,
+    projectNode: project
   });
 };
 
@@ -9918,7 +9926,23 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-window.onchange = () => console.log("now");
+window.scrolldelay = null;
+window.isScrolling = false;
+
+window.onkeydown = e => {
+  console.log(e.key);
+  if (e.key == "s") {
+    if (window.isScrolling) {
+      console.log("stop");
+      console.log(window.scrolldelay);
+      Object(_components_autoscroll_js__WEBPACK_IMPORTED_MODULE_2__["stopScroll"])();
+    } else {
+      console.log("start");
+      console.log(window.scrolldelay);
+      Object(_components_autoscroll_js__WEBPACK_IMPORTED_MODULE_2__["startScroll"])();
+    }
+  }
+};
 
 // const stopVideos = params => {
 //   [...document.querySelectorAll("video")].forEach(video => {
@@ -9926,17 +9950,6 @@ window.onchange = () => console.log("now");
 //     video.pause();
 //   });
 // };
-
-window.onkeydown = e => {
-  if (e.key == " ") {
-    if (window.isScrolling) {
-      console.log(window.scrolldelay);
-      Object(_components_autoscroll_js__WEBPACK_IMPORTED_MODULE_2__["stopScroll"])();
-    } else {
-      Object(_components_autoscroll_js__WEBPACK_IMPORTED_MODULE_2__["startScroll"])();
-    }
-  }
-};
 
 projects.forEach(_components_buildProject_js__WEBPACK_IMPORTED_MODULE_0__["default"]);
 projects.forEach((obj, index) => Object(_components_buildHeader_js__WEBPACK_IMPORTED_MODULE_1__["default"])(obj.name, index));
